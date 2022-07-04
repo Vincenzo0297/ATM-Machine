@@ -354,7 +354,7 @@ public class Main {
                     if(test5.getUserName().startsWith(preName)) {
                         System.out.printf("Enter the transfer amount:");
                         double money = scan.nextDouble();
-                        //Judge whether this amount exceeds your balance
+                        //Whether this amount exceeds the balance
                         if(money > acc.getMoney()){
                             System.out.println("Limit exceed over " + acc.getMoney() + ". Try again");
                         }
@@ -388,14 +388,14 @@ public class Main {
             //Determine whether the password is correct
             if(acc.getPassWord().equals(ConfirmPassword)){
                 while (true) {
-                    //You can enter a new password
+                    //enter a new password
                     System.out.printf("Enter a new password:");
                     String newPassWord = scan.next();
 
                     System.out.printf("Enter confirmation password:");
                     ConfirmPassword = scan.nextLine();
 
-                    if(newPassWord.equals(ConfirmPassword)){
+                    if(newPassWord.equals(ConfirmPassword)) {
                         //Change the password of the account object to the new password
                         acc.setPassWord(newPassWord);
                         return;  //End it directly!!
